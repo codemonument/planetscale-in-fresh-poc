@@ -2,7 +2,8 @@
   "tasks": {
     "start": "doppler run -- deno run -A --watch=static/,routes/ dev.ts",
     "db-shell": "pscale shell jbscratch_planetscale-in-deno main",
-    "db-reset": "doppler run -- deno run --unstable --allow-env=DATABASE_HOST,DATABASE_USERNAME,DATABASE_PASSWORD --allow-net=aws.connect.psdb.cloud ./scripts/db/reset-pets.ts"
+    "db-reset": "doppler run -- deno run --unstable --allow-env=DATABASE_HOST,DATABASE_USERNAME,DATABASE_PASSWORD --allow-net=aws.connect.psdb.cloud ./scripts/db/reset-pets.ts",
+    "db-list": "doppler run -- deno run --unstable --allow-env=DATABASE_HOST,DATABASE_USERNAME,DATABASE_PASSWORD --allow-net=aws.connect.psdb.cloud ./scripts/db/list-pets.ts"
   },
   "importMap": "./import_map.json",
   "compilerOptions": {
