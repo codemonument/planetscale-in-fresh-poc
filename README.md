@@ -20,3 +20,14 @@ Login Credentials: [See doppler account (private)](https://dashboard.doppler.com
 
 - [kysely-codegen](https://github.com/RobinBlomberg/kysely-codegen) => generate TS Types from Database Schema 
   (only for experimenting, may be not advisable in Prod)
+
+## Repo Log 
+
+### 2022-09-18 Create first Table 
+
+Create Table Example: https://www.w3schools.com/sql/sql_create_table.asp
+
+```
+deno task db-shell 
+CREATE TABLE `pets` (id int, name varchar(200));
+```
