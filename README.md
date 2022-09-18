@@ -7,6 +7,8 @@ URL: https://app.planetscale.com/bjesuiter/jbscratch_planetscale-in-deno
 
 Login Credentials: [See doppler account (private)](https://dashboard.doppler.com/workplace/f867183ebfa5d4d1e007/projects/planetscale-in-deno)
 
+Planetscale Schema: https://app.planetscale.com/bjesuiter/jbscratch_planetscale-in-deno/main/schema
+
 ## Tech 
 
 - @planetscale/database - HTTP API for Planetscale
