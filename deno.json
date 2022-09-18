@@ -1,6 +1,7 @@
 {
   "tasks": {
-    "start": "doppler run -- deno run -A --watch=static/,routes/ dev.ts"
+    "start": "doppler run -- deno run -A --watch=static/,routes/ dev.ts",
+    "db-shell": "pscale shell jbscratch_planetscale-in-deno main"
   },
   "importMap": "./import_map.json",
   "compilerOptions": {
