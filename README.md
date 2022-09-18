@@ -12,6 +12,9 @@ Login Credentials: [See doppler account (private)](https://dashboard.doppler.com
 - @planetscale/database - HTTP API for Planetscale
 - kysely - SQL Query Builder 
 - [kysely-planetscale](https://github.com/depot/kysely-planetscale) => Database Adapter via Planetscale HTTP Entrypoint
+- [pscale-cli](https://planetscale.com/docs/tutorials/connect-any-application)  
+  `brew install planetscale/tap/pscale`
+
 
 ## Going Further 
 
