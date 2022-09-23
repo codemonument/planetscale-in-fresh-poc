@@ -1,6 +1,6 @@
 {
   "tasks": {
-    "start": "doppler run -- deno run -A --watch=static/,routes/ dev.ts",
+    "start": "doppler run -- deno run --unstable -A --watch=static/,routes/ dev.ts",
     "db-shell": "pscale shell jbscratch_planetscale-in-deno main",
     "db-minimal": "deno task db-base ./scripts/db/minimal-select.ts",
     "db-reset": "deno task db-base ./scripts/db/reset-pets.ts",
