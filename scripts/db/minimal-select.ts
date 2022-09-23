@@ -1,21 +1,13 @@
-/**
- * Relevant import_map statements:
-    "kysely": "npm:kysely@0.21.6",
-    "kysely/": "npm:kysely@0.21.6/",
-    "kysely-planetscale": "npm:kysely-planetscale@0.2.0",
-    "kysely-planetscale/": "npm:kysely-planetscale@0.2.0/",
-    "@planetscale/database": "npm:@planetscale/database@1.3.0",
-    "@planetscale/database/": "npm:@planetscale/database@1.3.0/"
- */
 import { Kysely, sql } from "kysely";
 import { PlanetScaleDialect } from "kysely-planetscale";
 
-// Fixes Runtime Behavior:
+// Fixes Runtime Import Behavior
+// See github issue here:
+// https://github.com/denoland/deno/issues/16013
 import {} from "npm:@planetscale/database@1.3.0";
 
 interface PetsTable {
   id: number;
-
   name: string;
 }
 
@@ -24,10 +16,6 @@ interface Database {
   pets: PetsTable;
 }
 
-/**
- * You can create a simple playground databse on planetscale for free here:
- * https://auth.planetscale.com/sign-up
- */
 export const db: Kysely<Database> = new Kysely<Database>({
   dialect: new PlanetScaleDialect({
     host: Deno.env.get("DATABASE_HOST"),
