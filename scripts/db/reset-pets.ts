@@ -1,4 +1,4 @@
-import { db } from "@/src/db/index.ts";
+import { db } from "@/src/db/db.ts";
 import { sql } from "kysely";
 
 const truncatePets = sql<void>`TRUNCATE TABLE pets`;

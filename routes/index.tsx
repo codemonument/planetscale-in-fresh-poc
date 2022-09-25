@@ -1,5 +1,5 @@
 import Counter from "@/islands/Counter.tsx";
-import { db } from "@/src/db/index.ts";
+import { db } from "@/src/db/db.ts";
 
 // TODO: Query not working right now due to problem with npm imports in deno
 const pets = await db.selectFrom("pets").selectAll().execute(db);
