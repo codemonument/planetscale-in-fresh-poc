@@ -1,9 +1,10 @@
 import Counter from "@/islands/Counter.tsx";
-// import { db } from "@/src/db/index.ts";
+import { db } from "@/src/db/index.ts";
 
-// const pets = await db.selectFrom("pets").selectAll().execute(db);
-// console.log("\n Pets Table");
-// console.table(pets);
+// TODO: Query not working right now due to problem with npm imports in deno
+const pets = await db.selectFrom("pets").selectAll().execute(db);
+console.log("\n Pets Table");
+console.table(pets);
 
 
 export default function Home() {
@@ -23,7 +24,7 @@ export default function Home() {
       <hr></hr>
 
       <ul>
-        {/* {pets.map((pet: {id: number, name: string}) => <li>{pet.name}</li>)} */}
+        {pets.map((pet: {id: number, name: string}) => <li>{pet.name}</li>)}
       </ul>
 
     </div>
