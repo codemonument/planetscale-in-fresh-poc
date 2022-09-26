@@ -1,6 +1,7 @@
 import Counter from '@/islands/Counter.tsx';
 import { db } from '@/src/db/db.ts';
-import PetTable from '../components/PetTableCore.tsx';
+import PetTableCore from '../components/PetTableCore.tsx';
+import PetTableReact from '../components/PetTableReact.tsx';
 
 // TODO: Query not working right now due to problem with npm imports in deno
 const pets = await db.selectFrom('pets').selectAll().execute(db);
@@ -30,7 +31,8 @@ export default function Home() {
 
 			<hr></hr>
 
-			<PetTable data={pets}></PetTable>
+			{/* <PetTableCore data={pets}></PetTableCore> */}
+			{/* <PetTableReact data={pets}></PetTableReact> */}
 		</div>
 	);
 }
