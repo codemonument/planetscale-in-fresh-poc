@@ -23,6 +23,7 @@ export default function Home() {
 
 			<hr></hr>
 
+			<h1 class="text-2xl mt-6 mb-6">Planetscale Pets Table Content</h1>
 			<ul>
 				{pets.map((pet: { id: number; name: string }) => (
 					<li>{pet.name}</li>
