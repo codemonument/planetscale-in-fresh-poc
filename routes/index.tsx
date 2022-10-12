@@ -57,7 +57,7 @@ export default function Home({ data }: PageProps<HomePageProps>) {
 
 			<ul>
 				{pets.map((pet: PetsTable) => (
-					<li>{pet.name}</li>
+					<li key={pet.id}>{pet.name}</li>
 				))}
 			</ul>
 
