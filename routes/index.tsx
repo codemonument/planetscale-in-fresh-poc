@@ -48,7 +48,7 @@ export default function Home({ data }: PageProps<HomePageProps>) {
 				<label for="qname" class="mr-2 px-1">
 					Search for pet name:
 				</label>
-				<input id="qname" name="qname" value={query} class="  mr-2 py-1 px-2" />
+				<input type="search" id="qname" name="qname" value={query} class="  mr-2 py-1 px-2" />
 
 				<input class="py-1 px-2" type="submit" />
 			</form>

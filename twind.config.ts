@@ -10,8 +10,8 @@ export default {
   preflight: (preflight, { theme }) => ({
     ...preflight,
     h1: apply`text-2xl`,
-    input:
-      apply`rounded-md border border-gray-300 text-gray-900  focus:ring-blue-500 focus:border-blue-500`,
+    // focus:ring-blue-500 focus:border-blue-500
+    input: apply`rounded-md border border-gray-300 text-gray-900 `,
     button: apply`rounded-md `,
   }),
 } as Options;
