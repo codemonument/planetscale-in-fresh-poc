@@ -42,20 +42,15 @@ export default function Home({ data }: PageProps<HomePageProps>) {
 	const { filteredPets, query } = data;
 	return (
 		<div class="p-4 mx-auto max-w-screen-md">
-			<h1 class="text-2xl mt-6 mb-6">Planetscale Pets Table Content</h1>
+			<h1 class="mt-6 mb-6">Planetscale Pets Table Content</h1>
 
 			<form id="search-form" action="/" method="get">
-				<label for="qname" class="mb-2 text-sm font-medium text-red-900 dark:text-gray-300">
+				<label for="qname" class="mr-2 px-1">
 					Search for pet name:
 				</label>
-				<input
-					id="qname"
-					name="qname"
-					value={query}
-					class=" border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block "
-				/>
+				<input id="qname" name="qname" value={query} class="  mr-2 py-1 px-2" />
 
-				<input type="submit" />
+				<input class="py-1 px-2" type="submit" />
 			</form>
 
 			<hr class="my-2"></hr>
