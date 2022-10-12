@@ -42,7 +42,7 @@ export default function Home({ data }: PageProps<HomePageProps>) {
 	const { filteredPets, query } = data;
 	return (
 		<div class="p-4 mx-auto max-w-screen-md">
-			<h1 class="mt-6 mb-6">Planetscale Pets Table Content</h1>
+			<h1 class="mt-6 mb-6">Planetscale in Deno - Pets Demo</h1>
 
 			<form id="search-form" action="/" method="get">
 				<label for="qname" class="mr-2 px-1">
