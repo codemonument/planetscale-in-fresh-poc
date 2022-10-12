@@ -4,6 +4,8 @@ import { PetsTable } from '@/src/db/PetsTable.ts';
 import { Handlers, PageProps } from '$fresh/server.ts';
 import PetTableCore from '../components/PetTableCore.tsx';
 import PetTableReact from '../components/PetTableReact.tsx';
+import IslandList from '../islands/IslandList.tsx';
+import SimpleList from '../components/SimpleList.tsx';
 
 type HomePageProps = {
 	filteredPets: string[];
@@ -55,11 +57,8 @@ export default function Home({ data }: PageProps<HomePageProps>) {
 
 			<hr class="my-2"></hr>
 
-			<ul>
-				{pets.map((pet: PetsTable) => (
-					<li key={pet.id}>{pet.name}</li>
-				))}
-			</ul>
+			{/* <IslandList list={pets}></IslandList> */}
+			<SimpleList list={pets}></SimpleList>
 
 			<hr class="my-2"></hr>
 
