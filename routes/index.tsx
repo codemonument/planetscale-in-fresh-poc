@@ -43,7 +43,7 @@ export default function Home({ data }: PageProps<HomePageProps>) {
 	const pets: any = data.filteredPets;
 	const { filteredPets, query } = data;
 	return (
-		<div class="p-4 mx-auto max-w-screen-md">
+		<div>
 			<link rel="stylesheet" href="/global.css"></link>
 
 			<link rel="stylesheet" href="https://unpkg.com/open-props" />
@@ -51,23 +51,21 @@ export default function Home({ data }: PageProps<HomePageProps>) {
 			<link rel="stylesheet" href="https://unpkg.com/open-props/buttons.min.css" />
 			{/* <link rel="stylesheet" href="https://unpkg.com/open-props/indigo-hsl.min.css" /> */}
 
-			<h1 class="mt-6 mb-6">Planetscale in Deno - Pets Demo</h1>
+			<h1>Planetscale in Deno - Pets Demo</h1>
 
 			<form id="search-form" action="/" method="get">
-				<label for="qname" class="mr-2 px-1">
-					Search for pet name:
-				</label>
-				<input type="search" id="qname" name="qname" value={query} class="  mr-2 py-1 px-2" />
+				<label for="qname">Search for pet name:</label>
+				<input type="search" id="qname" name="qname" value={query} />
 
-				<input class="py-1 px-2" type="submit" />
+				<input type="submit" />
 			</form>
 
-			<hr class="my-2"></hr>
+			<hr></hr>
 
 			{/* <IslandList list={pets}></IslandList> */}
 			<SimpleList list={pets}></SimpleList>
 
-			<hr class="my-2"></hr>
+			<hr></hr>
 
 			{/* <PetTableCore data={pets}></PetTableCore> */}
 			{/* <PetTableReact data={pets}></PetTableReact> */}
