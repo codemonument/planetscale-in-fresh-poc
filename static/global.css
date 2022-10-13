@@ -1,5 +1,6 @@
 body {
     background-image: var(--gradient-1);
+    padding: var(--size-3);
 }
 
 label {
