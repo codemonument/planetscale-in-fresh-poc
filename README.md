@@ -4,6 +4,7 @@
 
 - Deploy on deno deploy
   - find / write adapter for doppler usage from within deno!
+- Switch from twind to openprops!
 
 ## Base Data
 
