@@ -44,6 +44,13 @@ export default function Home({ data }: PageProps<HomePageProps>) {
 	const { filteredPets, query } = data;
 	return (
 		<div class="p-4 mx-auto max-w-screen-md">
+			<link rel="stylesheet" href="/global.css"></link>
+
+			<link rel="stylesheet" href="https://unpkg.com/open-props" />
+			<link rel="stylesheet" href="https://unpkg.com/open-props/normalize.min.css" />
+			<link rel="stylesheet" href="https://unpkg.com/open-props/buttons.min.css" />
+			{/* <link rel="stylesheet" href="https://unpkg.com/open-props/indigo-hsl.min.css" /> */}
+
 			<h1 class="mt-6 mb-6">Planetscale in Deno - Pets Demo</h1>
 
 			<form id="search-form" action="/" method="get">

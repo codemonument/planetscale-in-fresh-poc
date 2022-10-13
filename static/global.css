@@ -1,0 +1,33 @@
+body {
+    background-image: var(--gradient-1);
+}
+
+label {
+    margin-right: var(--size-3);
+}
+
+input[type="search"] {
+    margin-right: var(--size-3);
+    background-color: var(--gray-0);
+}
+
+/* input[type="search"]:focus {
+    outline: var(--gray-0);
+} */
+
+input[type="submit"] {
+    text-shadow: none;
+    border: none;
+    background-color: var(--gray-0);
+    box-shadow: var(--shadow-2);
+    color: var(--pink-8);
+}
+
+input[type="submit"]:hover {
+    box-shadow: var(--shadow-4);
+}
+
+hr {
+    box-shadow: var(--shadow-3);
+    background-color: var(--gray-0);
+}
