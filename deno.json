@@ -4,6 +4,7 @@
     "dev": "doppler run -- deno run --unstable -A --watch=static/,routes/ dev.ts",
     "prod": "doppler run -- deno run --unstable -A --watch=static/,routes/ main.ts",
     "cache": "deno cache --reload --unstable  main.ts",
+    "upgrade": "deno run -A -r https://fresh.deno.dev/update .",
     "db-shell": "pscale shell jbscratch_planetscale-in-deno main",
     "db-minimal": "deno task db-base ./scripts/db/minimal-select.ts",
     "db-reset": "deno task db-base ./scripts/db/reset-pets.ts",
