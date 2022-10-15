@@ -22,6 +22,7 @@
     "@tanstack/react-table": "npm:@tanstack/react-table@8.5.13",
     "@tanstack/react-table/": "npm:@tanstack/react-table@8.5.13/",
     "@tanstack/table-core": "npm:@tanstack/table-core@8.5.13",
-    "@tanstack/table-core/": "npm:@tanstack/table-core@8.5.13/"
+    "@tanstack/table-core/": "npm:@tanstack/table-core@8.5.13/",
+    "doppler_client": "https://deno.land/x/doppler_client@0.1.2/mod.ts"
   }
 }
