@@ -1,4 +1,6 @@
-import { db } from "@/src/db/db.ts";
+import { getDB } from "@/src/db/db.ts";
+
+const db = await getDB();
 
 const result = await db.selectFrom("pets").selectAll().execute(db);
 console.log("\n Pets Table");
