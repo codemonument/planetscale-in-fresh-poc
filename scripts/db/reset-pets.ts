@@ -1,5 +1,7 @@
-import { db } from "@/src/db/db.ts";
+import { getDB } from "@/src/db/db.ts";
 import { sql } from "kysely";
+
+const db = await getDB();
 
 const truncatePets = sql<void>`TRUNCATE TABLE pets`;
 await truncatePets.execute(db);
