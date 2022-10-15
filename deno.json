@@ -10,7 +10,7 @@
     "db-minimal": "deno task db-base ./scripts/db/minimal-select.ts",
     "db-reset": "deno task db-base ./scripts/db/reset-pets.ts",
     "db-list": "deno task db-base ./scripts/db/list-pets.ts",
-    "db-base": "doppler run -- deno run --unstable --allow-env=DATABASE_HOST,DATABASE_USERNAME,DATABASE_PASSWORD --allow-net=aws.connect.psdb.cloud "
+    "db-base": "doppler run -- deno run --unstable --allow-env=DOPPLER_TOKEN --allow-net=aws.connect.psdb.cloud,api.doppler.com "
   },
   "importMap": "./import_map.json",
   "compilerOptions": {
