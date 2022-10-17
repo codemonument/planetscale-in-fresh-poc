@@ -7,23 +7,23 @@ import { Kysely } from "kysely";
 import { PlanetScaleDialect } from "kysely-planetscale";
 
 import { PetsTable } from "./PetsTable.ts";
-import { secrets } from "@/src/secrets.ts";
+import { secretsPromise } from "@/src/secrets.ts";
 
 // Keys of this interface are table names.
 interface Database {
   pets: PetsTable;
 }
 
-export const db: Promise<Kysely<Database>> = initDb();
+export const dbPromise: Promise<Kysely<Database>> = initDb();
 
 async function initDb() {
-  const envs = await secrets;
+  const secrets = await secretsPromise;
 
   const db: Kysely<Database> = new Kysely<Database>({
     dialect: new PlanetScaleDialect({
-      host: envs.get("DATABASE_HOST"),
-      username: envs.get("DATABASE_USERNAME"),
-      password: envs.get("DATABASE_PASSWORD"),
+      host: secrets.get("DATABASE_HOST"),
+      username: secrets.get("DATABASE_USERNAME"),
+      password: secrets.get("DATABASE_PASSWORD"),
     }),
   });
 

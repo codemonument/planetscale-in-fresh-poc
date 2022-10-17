@@ -1,6 +1,6 @@
 import { DopplerService } from "doppler_client";
 
-export const secrets: Promise<Map<string, string>> = loadSecrets();
+export const secretsPromise: Promise<Map<string, string>> = loadSecrets();
 
 async function loadSecrets() {
   // DOPPLER_TOKEN will be filled by doppler itself for local development,
