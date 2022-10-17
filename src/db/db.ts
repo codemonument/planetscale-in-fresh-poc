@@ -17,6 +17,7 @@ interface Database {
 export const dbPromise: Promise<Kysely<Database>> = initDb();
 
 async function initDb() {
+  console.time("initDb");
   const secrets = await secretsPromise;
 
   const db: Kysely<Database> = new Kysely<Database>({
@@ -27,5 +28,6 @@ async function initDb() {
     }),
   });
 
+  console.timeEnd("initDb");
   return db;
 }

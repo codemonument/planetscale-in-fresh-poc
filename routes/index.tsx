@@ -1,5 +1,5 @@
 import Counter from '@/islands/Counter.tsx';
-import { getDB } from '@/src/db/db.ts';
+import { dbPromise } from '@/src/db/db.ts';
 import { PetsTable } from '@/src/db/PetsTable.ts';
 import { Handlers, PageProps } from '$fresh/server.ts';
 import PetTableCore from '../components/PetTableCore.tsx';
@@ -14,14 +14,16 @@ type HomePageProps = {
 
 export const handler: Handlers<HomePageProps> = {
 	async GET(req: any, ctx: any) {
+		console.debug('\nStarting indexHandler');
+		const db = await dbPromise;
+
+		console.time(`indexHandler`);
 		const url = new URL(req.url);
 		const query = url.searchParams.get('qname') || '';
-		console.log('Query:', query);
-		console.log('Typeof Query:', typeof query);
+		if (query.length > 0) console.log('Search Query: ', query);
 
-		const db = await getDB();
 		// TODO: Query not working in `deno task dev` right now due to problem with npm imports in deno
-		const pets: PetsTable[] = await db.selectFrom('pets').selectAll().execute(db);
+		const pets: PetsTable[] = await db.selectFrom('pets').selectAll().execute(dbPromise);
 
 		console.log('\n Pets Table');
 		console.table(pets);
@@ -29,13 +31,13 @@ export const handler: Handlers<HomePageProps> = {
 		let filteredPets;
 		if (query.length > 0) {
 			filteredPets = pets.filter((pet) => pet.name.includes(query));
+			console.log('\n Filtered Pets');
+			console.table(filteredPets);
 		} else {
 			filteredPets = pets;
 		}
 
-		console.log('\n Filtered Pets');
-		console.table(filteredPets);
-
+		console.timeEnd(`indexHandler`);
 		return ctx.render({ filteredPets, query });
 	},
 };

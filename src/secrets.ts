@@ -3,6 +3,7 @@ import { DopplerService } from "doppler_client";
 export const secretsPromise: Promise<Map<string, string>> = loadSecrets();
 
 async function loadSecrets() {
+  console.time(`loadSecrets`);
   // DOPPLER_TOKEN will be filled by doppler itself for local development,
   // but by deno deploy env vars in prod
   const token = Deno.env.get("DOPPLER_TOKEN");
@@ -16,6 +17,7 @@ async function loadSecrets() {
   const rootConfig = configs.find((config) => config.root === true) ||
     configs[0];
 
+  console.timeEnd("loadSecrets");
   return await doppler.getSecretsMap(
     DOPPLER_PROJECT,
     rootConfig.name,
