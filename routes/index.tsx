@@ -1,5 +1,5 @@
 import Counter from '@/islands/Counter.tsx';
-import { db } from '@/src/db/db.ts';
+import { getDB } from '@/src/db/db.ts';
 import { PetsTable } from '@/src/db/PetsTable.ts';
 import { Handlers, PageProps } from '$fresh/server.ts';
 import PetTableCore from '../components/PetTableCore.tsx';
@@ -19,6 +19,7 @@ export const handler: Handlers<HomePageProps> = {
 		console.log('Query:', query);
 		console.log('Typeof Query:', typeof query);
 
+		const db = await getDB();
 		// TODO: Query not working in `deno task dev` right now due to problem with npm imports in deno
 		const pets: PetsTable[] = await db.selectFrom('pets').selectAll().execute(db);
 
