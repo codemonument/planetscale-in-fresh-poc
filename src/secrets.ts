@@ -1,20 +1,12 @@
 import { DopplerService } from "doppler_client";
-import { signal } from "@preact/signals";
 
-export const secretsMap = signal<Map<string, string> | undefined>(undefined);
+export const secrets: Promise<Map<string, string>> = loadSecrets();
 
-export async function triggerSecretLoading(forceRefresh?: boolean) {
+async function loadSecrets() {
   // DOPPLER_TOKEN will be filled by doppler itself for local development,
   // but by deno deploy env vars in prod
   const token = Deno.env.get("DOPPLER_TOKEN");
   if (!token) throw new Error(`Missing DOPPLER_TOKEN env var!`);
-
-  if (secretsMap.value === undefined && forceRefresh !== true) {
-    console.warn(
-      `triggerSecretLoading: secretsMap is already available, but forceRefresh is false. Doing nothing.`,
-    );
-    return;
-  }
 
   const DOPPLER_PROJECT = "planetscale-in-deno";
 
@@ -24,8 +16,7 @@ export async function triggerSecretLoading(forceRefresh?: boolean) {
   const rootConfig = configs.find((config) => config.root === true) ||
     configs[0];
 
-  // updating the value property of the signal updates the whole signal :)
-  secretsMap.value = await doppler.getSecretsMap(
+  return await doppler.getSecretsMap(
     DOPPLER_PROJECT,
     rootConfig.name,
   );

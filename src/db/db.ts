@@ -7,24 +7,25 @@ import { Kysely } from "kysely";
 import { PlanetScaleDialect } from "kysely-planetscale";
 
 import { PetsTable } from "./PetsTable.ts";
-import { secretsMap } from "@/src/secrets.ts";
-import { computed } from "@preact/signals";
+import { secrets } from "@/src/secrets.ts";
 
 // Keys of this interface are table names.
 interface Database {
   pets: PetsTable;
 }
 
-const db = computed<Kysely<Database>>(() => {
-  if (!secretsMap.value) return;
+export const db: Promise<Kysely<Database>> = initDb();
+
+async function initDb() {
+  const envs = await secrets;
 
   const db: Kysely<Database> = new Kysely<Database>({
     dialect: new PlanetScaleDialect({
-      host: secretsMap.value.get("DATABASE_HOST"),
-      username: secretsMap.value.get("DATABASE_USERNAME"),
-      password: secretsMap.value.get("DATABASE_PASSWORD"),
+      host: envs.get("DATABASE_HOST"),
+      username: envs.get("DATABASE_USERNAME"),
+      password: envs.get("DATABASE_PASSWORD"),
     }),
   });
 
   return db;
-});
+}
