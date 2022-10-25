@@ -8,12 +8,14 @@ h1 {
     margin-bottom: var(--size-6);
 }
 
-label {
-    margin-right: var(--size-3);
+#search-form {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: var(--size-3);
+    align-items: center; 
 }
 
 input[type="search"] {
-    margin-right: var(--size-3);
     background-color: var(--gray-0);
 }
 
