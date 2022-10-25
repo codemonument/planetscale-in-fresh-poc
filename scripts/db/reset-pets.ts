@@ -1,7 +1,7 @@
-import { getDB } from "@/src/db/db.ts";
 import { sql } from "kysely";
 
-const db = await getDB();
+import { dbPromise } from "@/src/db/db.ts";
+const db = await dbPromise;
 
 const truncatePets = sql<void>`TRUNCATE TABLE pets`;
 await truncatePets.execute(db);
