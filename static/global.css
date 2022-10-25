@@ -3,6 +3,11 @@ body {
     padding: var(--size-3);
 }
 
+h1 {
+    max-inline-size: var(--size-header-2);
+    margin-bottom: var(--size-6);
+}
+
 label {
     margin-right: var(--size-3);
 }
