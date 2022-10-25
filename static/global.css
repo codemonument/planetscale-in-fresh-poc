@@ -4,7 +4,7 @@
 
 body {
 
-    background-image: var(--gradient-1);
+    background-image: var(--gradient-3);
     padding: var(--size-3);
     font-size: var(--font-size-3)
 }
