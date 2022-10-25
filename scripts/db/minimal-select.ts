@@ -4,7 +4,10 @@ import { PlanetScaleDialect } from "kysely-planetscale";
 // Fixes Runtime Import Behavior
 // See github issue here:
 // https://github.com/denoland/deno/issues/16013
-import {} from "npm:@planetscale/database@1.3.0";
+// import {} from "npm:@planetscale/database@1.3.0";
+
+// Replace npm: import with esm.sh to be able to deploy to deno deploy
+import {} from "https://esm.sh/*@planetscale/database@1.4.0";
 
 interface PetsTable {
   id: number;

@@ -1,7 +1,10 @@
 // Added this empty import line to force download of @planetscale/database npm package,
 // since normally it's transitively used by kysely-planetscale without the `npm:` identifier
 // See Github issue: https://github.com/denoland/deno/issues/16013
-import {} from "npm:@planetscale/database@1.3.0";
+// import {} from "npm:@planetscale/database@1.3.0";
+
+// Replace npm: import with esm.sh to be able to deploy to deno deploy
+import {} from "@planetscale/database";
 
 import { Kysely } from "kysely";
 import { PlanetScaleDialect } from "kysely-planetscale";
