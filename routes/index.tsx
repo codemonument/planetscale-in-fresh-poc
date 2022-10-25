@@ -1,9 +1,8 @@
-import Counter from '@/islands/Counter.tsx';
 import { dbPromise } from '@/src/db/db.ts';
 import { PetsTable } from '@/src/db/PetsTable.ts';
 import { Handlers, PageProps } from '$fresh/server.ts';
-import PetTableCore from '../components/PetTableCore.tsx';
-import PetTableReact from '../components/PetTableReact.tsx';
+// import PetTableCore from '../components/PetTableCore.tsx';
+// import PetTableReact from '../components/PetTableReact.tsx';
 import IslandList from '../islands/IslandList.tsx';
 import SimpleList from '../components/SimpleList.tsx';
 

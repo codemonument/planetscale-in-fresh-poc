@@ -9,12 +9,20 @@
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.0.1",
     "@preact/compat": "https://esm.sh/*@preact/compat@17.1.1",
     "@preact/compat/": "https://esm.sh/*@preact/compat@17.1.1/",
+    "react": "https://esm.sh/react@17",
+    "react/": "https://esm.sh/react@17/",
+    "twind": "https://esm.sh/twind@0.16.17",
+    "twind/": "https://esm.sh/twind@0.16.17/",
     "kysely": "npm:kysely@0.22.0",
     "kysely/": "npm:kysely@0.22.0/",
     "kysely-planetscale": "npm:kysely-planetscale@1.0.1",
     "kysely-planetscale/": "npm:kysely-planetscale@1.0.1/",
     "@planetscale/database": "npm:@planetscale/database@1.4.0",
     "@planetscale/database/": "npm:@planetscale/database@1.4.0/",
+    "@tanstack/react-table": "npm:@tanstack/react-table@8.5.13",
+    "@tanstack/react-table/": "npm:@tanstack/react-table@8.5.13/",
+    "@tanstack/table-core": "npm:@tanstack/table-core@8.5.13",
+    "@tanstack/table-core/": "npm:@tanstack/table-core@8.5.13/",
     "doppler_client": "https://deno.land/x/doppler_client@0.2.0/mod.ts"
   }
 }
