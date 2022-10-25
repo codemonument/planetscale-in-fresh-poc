@@ -1,7 +1,8 @@
 {
   "tasks": {
-    "start": "doppler run -- deno run --unstable -A --watch=static/,routes/ main.ts",
+    "start": "deno task dev",
     "dev": "doppler run -- deno run --unstable -A --watch=static/,routes/ dev.ts",
+    "prod-watch": "doppler run -- deno run --unstable -A --watch=static/,routes/ main.ts",
     "prod": "doppler run -- deno run --unstable -A main.ts",
     "cache": "deno cache --reload --unstable  main.ts",
     "upgrade": "deno run -A -r https://fresh.deno.dev/update .",
