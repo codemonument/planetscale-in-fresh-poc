@@ -22,7 +22,7 @@ export const handler: Handlers<HomePageProps> = {
 		if (query.length > 0) console.log('Search Query: ', query);
 
 		// TODO: Query not working in `deno task dev` right now due to problem with npm imports in deno
-		const pets: PetsTable[] = await db.selectFrom('pets').selectAll().execute(dbPromise);
+		const pets: PetsTable[] = await db.selectFrom('pets').selectAll().execute();
 
 		console.log('\n Pets Table');
 		console.table(pets);
