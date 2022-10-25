@@ -12,7 +12,7 @@
     "db-list": "deno task db-base ./scripts/db/list-pets.ts",
     "db-base": "doppler run -- deno run --unstable --allow-env=DOPPLER_TOKEN --allow-net=aws.connect.psdb.cloud,api.doppler.com "
   },
-  "importMap": "./import_map.json",
+  "importMap": "./importMap.json",
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "preact"
