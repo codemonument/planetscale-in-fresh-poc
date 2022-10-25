@@ -62,12 +62,10 @@ export default function Home({ data }: PageProps<HomePageProps>) {
 				<input type="submit" />
 			</form>
 
-			<hr></hr>
+			<h2>Pet List</h2>
 
 			{/* <IslandList list={pets}></IslandList> */}
 			<SimpleList list={pets}></SimpleList>
-
-			<hr></hr>
 
 			{/* <PetTableCore data={pets}></PetTableCore> */}
 			{/* <PetTableReact data={pets}></PetTableReact> */}

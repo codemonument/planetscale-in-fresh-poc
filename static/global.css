@@ -4,8 +4,14 @@ body {
 }
 
 h1 {
+    font-size: var(--font-size-6);
     max-inline-size: var(--size-header-2);
     margin-bottom: var(--size-6);
+}
+
+h2 {
+    font-size: var(--font-size-5);
+    margin: var(--size-5) 0;
 }
 
 #search-form {
@@ -17,11 +23,12 @@ h1 {
 
 input[type="search"] {
     background-color: var(--gray-0);
+    color: var(--pink-8);
 }
 
-/* input[type="search"]:focus {
-    outline: var(--gray-0);
-} */
+input[type="search"]:focus {
+    outline: var(--pink-6) solid var(--size-1);
+}
 
 input[type="submit"] {
     text-shadow: none;
