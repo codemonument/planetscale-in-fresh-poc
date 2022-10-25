@@ -23,7 +23,7 @@ h2 {
 
 #search-form {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     gap: var(--size-3);
     align-items: center; 
 }
