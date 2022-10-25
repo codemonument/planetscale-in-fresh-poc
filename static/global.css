@@ -1,6 +1,13 @@
 body {
+
     background-image: var(--gradient-1);
     padding: var(--size-3);
+    font-size: var(--font-size-3)
+}
+
+.container {
+    width: min(100% - var(--size-2), 50rem); 
+    margin-inline: auto;
 }
 
 h1 {

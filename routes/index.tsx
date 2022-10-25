@@ -45,7 +45,7 @@ export default function Home({ data }: PageProps<HomePageProps>) {
 	const pets: any = data.filteredPets;
 	const { filteredPets, query } = data;
 	return (
-		<div>
+		<div class="container">
 			<link rel="stylesheet" href="/global.css"></link>
 
 			<link rel="stylesheet" href="https://unpkg.com/open-props" />
