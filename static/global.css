@@ -1,3 +1,7 @@
+:root {
+    --brand: var(--pink-8)
+}
+
 body {
 
     background-image: var(--gradient-1);
@@ -28,9 +32,12 @@ h2 {
     align-items: center; 
 }
 
+input {
+    color: var(--brand);
+}
+
 input[type="search"] {
     background-color: var(--gray-0);
-    color: var(--pink-8);
 }
 
 input[type="search"]:focus {
@@ -42,7 +49,6 @@ input[type="submit"] {
     border: none;
     background-color: var(--gray-0);
     box-shadow: var(--shadow-2);
-    color: var(--pink-8);
 }
 
 input[type="submit"]:hover {
