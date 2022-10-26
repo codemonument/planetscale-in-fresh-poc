@@ -1,3 +1,4 @@
+import { Head } from '$fresh/runtime.ts';
 import { dbPromise } from '@/src/db/db.ts';
 import { PetsTable } from '@/src/db/PetsTable.ts';
 import { Handlers, PageProps } from '$fresh/server.ts';
@@ -45,30 +46,35 @@ export default function Home({ data }: PageProps<HomePageProps>) {
 	const pets: any = data.filteredPets;
 	const { filteredPets, query } = data;
 	return (
-		<div class="container">
-			<link rel="stylesheet" href="/global.css"></link>
+		<>
+			<Head>
+				<title>Planetscale in Deno</title>
+				<link rel="stylesheet" href="https://unpkg.com/open-props/open-props.min.css" />
+				<link rel="stylesheet" href="https://unpkg.com/open-props/normalize.min.css" />
+				<link rel="stylesheet" href="https://unpkg.com/open-props/buttons.min.css" />
 
-			<link rel="stylesheet" href="https://unpkg.com/open-props/open-props.min.css" />
-			<link rel="stylesheet" href="https://unpkg.com/open-props/normalize.min.css" />
-			<link rel="stylesheet" href="https://unpkg.com/open-props/buttons.min.css" />
-			{/* <link rel="stylesheet" href="https://unpkg.com/open-props/indigo-hsl.min.css" /> */}
+				{/* <link rel="stylesheet" href="https://unpkg.com/open-props/indigo-hsl.min.css" /> */}
 
-			<h1>Planetscale in Deno - Pets Demo</h1>
+				<link rel="stylesheet" href="/global.css"></link>
+			</Head>
+			<div class="container">
+				<h1>Planetscale in Deno - Pets Demo</h1>
 
-			<form id="search-form" action="/" method="get">
-				<label for="qname">Search for pet name:</label>
-				<input type="search" id="qname" name="qname" value={query} />
+				<form id="search-form" action="/" method="get">
+					<label for="qname">Search for pet name:</label>
+					<input type="search" id="qname" name="qname" value={query} />
 
-				<input type="submit" />
-			</form>
+					<input type="submit" />
+				</form>
 
-			<h2>Pet List</h2>
+				<h2>Pet List</h2>
 
-			{/* <IslandList list={pets}></IslandList> */}
-			<SimpleList list={pets}></SimpleList>
+				{/* <IslandList list={pets}></IslandList> */}
+				<SimpleList list={pets}></SimpleList>
 
-			{/* <PetTableCore data={pets}></PetTableCore> */}
-			{/* <PetTableReact data={pets}></PetTableReact> */}
-		</div>
+				{/* <PetTableCore data={pets}></PetTableCore> */}
+				{/* <PetTableReact data={pets}></PetTableReact> */}
+			</div>
+		</>
 	);
 }
