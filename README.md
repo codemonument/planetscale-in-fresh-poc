@@ -31,7 +31,7 @@ Planetscale Schema: https://app.planetscale.com/bjesuiter/jbscratch_planetscale-
 
 ## Maintainer Links
 
-- Deno Deploy Dashboard: https://dash.deno.com/projects/planetscale-demo/logs
+- Deno Deploy Dashboard: https://dash.deno.com/projects/planetscale-demo
 
 ## Repo Log
 
