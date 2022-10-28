@@ -51,7 +51,8 @@ export default function Home({ data }: PageProps<HomePageProps>) {
 				<title>Planetscale in Deno</title>
 				<link rel="stylesheet" href="https://unpkg.com/open-props/open-props.min.css" />
 				<link rel="stylesheet" href="https://unpkg.com/open-props/normalize.min.css" />
-				<link rel="stylesheet" href="https://unpkg.com/open-props/buttons.min.css" />
+				{/* TODO: Check problems with button.min.css loading from unpkg! */}
+				{/* <link rel="stylesheet" href="https://unpkg.com/open-props/buttons.min.css" /> */}
 
 				{/* <link rel="stylesheet" href="https://unpkg.com/open-props/indigo-hsl.min.css" /> */}
 
