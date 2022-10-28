@@ -29,6 +29,10 @@ Planetscale Schema: https://app.planetscale.com/bjesuiter/jbscratch_planetscale-
 - [kysely-codegen](https://github.com/RobinBlomberg/kysely-codegen) => generate TS Types from Database Schema
   (only for experimenting, may be not advisable in Prod)
 
+## Maintainer Links
+
+- Deno Dashboard: https://dash.deno.com/projects/planetscale-demo/logs
+
 ## Repo Log
 
 ### 2022-09-18 Create first Table
