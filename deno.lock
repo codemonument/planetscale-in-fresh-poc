@@ -1444,5 +1444,25 @@
     "https://esm.sh/v96/preact-render-to-string@5.2.4/X-ZS8q/src/index.d.ts": "b1d73703252c8570fdf2952475805f5808ba3511fefbd93a3e7bd8406de7dcd0",
     "https://esm.sh/v96/preact@10.11.0/src/index.d.ts": "1a5c331227be54be6515b0c92a469d352834fa413963ae84a39a05a3177111f6",
     "https://esm.sh/v96/preact@10.11.0/src/jsx.d.ts": "c423715fd7992b2e1446fea11d2d04e8adbd66c1edca1ce5e85f90e0d26a2eb2"
+  },
+  "npm": {
+    "specifiers": {
+      "kysely-planetscale@1.1.0": "kysely-planetscale@1.1.0",
+      "kysely@0.22.0": "kysely@0.22.0"
+    },
+    "packages": {
+      "date-fns@2.29.3": {
+        "integrity": "sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==",
+        "dependencies": {}
+      },
+      "kysely-planetscale@1.1.0": {
+        "integrity": "sha512-0gtQj5E5UsspwBWlPEQ2A5fqx3WUwJmt4OlKUsWbDeo0QAG92Txsfje+sdyR4aUM4k8wr+QPv06/A+djKou/yg==",
+        "dependencies": { "date-fns": "date-fns@2.29.3" }
+      },
+      "kysely@0.22.0": {
+        "integrity": "sha512-ZE3qWtnqLOalodzfK5QUEcm7AEulhxsPNuKaGFsC3XiqO92vMLm+mAHk/NnbSIOtC4RmGm0nsv700i8KDp1gfQ==",
+        "dependencies": {}
+      }
+    }
   }
 }
