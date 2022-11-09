@@ -1,5 +1,5 @@
-import { Kysely, sql } from "kysely";
-import { PlanetScaleDialect } from "kysely-planetscale";
+import { Kysely, sql } from "kysely-npm";
+import { PlanetScaleDialect } from "kysely-planetscale-npm";
 
 // Fixes Runtime Import Behavior
 // See github issue here:
@@ -7,7 +7,7 @@ import { PlanetScaleDialect } from "kysely-planetscale";
 // import {} from "npm:@planetscale/database@1.3.0";
 
 // Replace npm: import with esm.sh to be able to deploy to deno deploy
-import {} from "https://esm.sh/*@planetscale/database@1.4.0";
+import {} from "planetscale-database";
 
 interface PetsTable {
   id: number;
