@@ -1447,10 +1447,15 @@
   },
   "npm": {
     "specifiers": {
+      "@planetscale/database@1.4.0": "@planetscale/database@1.4.0",
       "kysely-planetscale@1.1.0": "kysely-planetscale@1.1.0",
       "kysely@0.22.0": "kysely@0.22.0"
     },
     "packages": {
+      "@planetscale/database@1.4.0": {
+        "integrity": "sha512-lva57Z/Nz57ocB3dwaWPDGMbb+dj5HtooVB9c0DPcAF9SHbQyfovDyGK5bDgcmCMVoonfblcYv7fr+WBLc3xNw==",
+        "dependencies": {}
+      },
       "date-fns@2.29.3": {
         "integrity": "sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==",
         "dependencies": {}
