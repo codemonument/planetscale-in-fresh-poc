@@ -10,7 +10,6 @@
     "@preact/compat": "https://esm.sh/*@preact/compat@17.1.1",
     "@preact/compat/": "https://esm.sh/*@preact/compat@17.1.1/",
     "kysely": "https://esm.sh/*kysely@0.22.0",
-    "kysely/": "https://esm.sh/*kysely@0.22.0/",
     "kysely-planetscale": "https://esm.sh/*kysely-planetscale@1.1.0",
     "date-fns": "https://esm.sh/*date-fns@2.29.3",
     "date-fns/": "https://esm.sh/*date-fns@2.29.3/",
