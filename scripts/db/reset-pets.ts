@@ -15,6 +15,7 @@ await db
   ])
   .executeTakeFirstOrThrow();
 
-const result = await db.selectFrom("pets").selectAll().execute(db);
+const result = await db.selectFrom("pets").selectAll().execute();
 console.log("\n Pets Table");
 console.table(result);
+‚
