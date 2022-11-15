@@ -1,5 +1,7 @@
 # planetscale-in-deno PoC
 
+Live Version on Deno Deploy: https://planetscale-in.deno.dev/
+
 ## Todos
 
 - Deploy on deno deploy
@@ -31,7 +33,7 @@ Planetscale Schema: https://app.planetscale.com/bjesuiter/jbscratch_planetscale-
 
 ## Maintainer Links
 
-- Deno Deploy Dashboard: https://dash.deno.com/projects/planetscale-demo
+- Deno Deploy Dashboard: https://dash.deno.com/projects/planetscale-in
 
 ## Repo Log
 
