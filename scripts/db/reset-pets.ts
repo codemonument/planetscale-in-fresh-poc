@@ -18,4 +18,3 @@ await db
 const result = await db.selectFrom("pets").selectAll().execute();
 console.log("\n Pets Table");
 console.table(result);
-‚
